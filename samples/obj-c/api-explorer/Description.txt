@@ -1,5 +1,0 @@
-A small sample in objective C showing how to connect to 
-an user Planzone with oAuth and use the Planzone API
-
-created by Imade LAKHLIFI 
-Copyright (c) Planzone 2009

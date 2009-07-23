@@ -23,15 +23,8 @@
 #import "OAuthConsumer/OAuthConsumer.h"
 #import "JSON.h"
 
-#define WEB
-
-#ifdef WEB
 #define URL_REQ			@"http://ws.planzone.com"
 #define URL_AUTH		@"http://ws.planzone.com"
-#else
-#define URL_REQ			@"http://ws.fr-gamay.org:8080"
-#define URL_AUTH		@"https://ws.fr-gamay.org:8080"
-#endif
 
 #define DEFAULT_FORMAT	@"xml"
 
