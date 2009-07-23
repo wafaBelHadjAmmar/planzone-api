@@ -40,8 +40,8 @@
 - (void) getRequestToken{ 
 	
 	if (!consumer) {
-		consumer = [[OAConsumer alloc] initWithKey:@"azertyuiopqsdfghjklmwxcvbnazerty"
-                                            secret:@"nbvcxwmlkjhgfdsq"];
+		consumer = [[OAConsumer alloc] initWithKey:@"put_your_application_Key_here"
+                                            secret:@"and_your secret_key_here"];
 															
 	}
 	
