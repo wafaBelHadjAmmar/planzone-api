@@ -1,4 +1,4 @@
-A simple sample in objective C showing you how to connect to an user Planzone with OAUth and use the Planzone API
+This is a simple sample in objective C showing how to connect to an user Planzone with OAUth and use the Planzone API
 
 created by Imade LAKHLIFI
 Copyright (c) Planzone 2009
