@@ -1,0 +1,961 @@
+body
+{
+
+
+
+}
+td{
+background-color:#DFF0F3 !important;
+}
+th{
+background-color:#DFF0F3 !important; /*EFF0F0 gris */
+}
+
+#pz_header
+{  
+   float: right;
+   height: auto;
+   width: 50%;
+ 
+   font-weight:bold;
+   background:transparent url(chrome://ProjectBar/skin/pz_title-gradient.png) repeat-x scroll 0 0;
+
+}
+
+#pz_containerPrinc{
+   height:100%;
+   margin-top:5px;
+
+}
+
+#pz_entete{
+  border-bottom: 1px solid;
+  padding-bottom:6px;
+  border-color: #CCCECE;
+  height:25px;
+
+}
+
+#pz_logo{
+
+float:left;
+
+cursor:pointer;
+
+}
+
+#pz_titre{
+
+float:right;
+
+
+}
+#pz_load{
+
+float:left;
+margin-right:30%;
+
+}
+
+
+#pz_corpsPrincipal
+{  
+   float: left;
+   height: auto;
+   width:77%;
+   margin-top:2px;
+   padding-right:1px;
+
+   
+}
+
+
+#pz_message{
+    float:left;
+    font-style: italic ;
+
+}
+
+ul.pz_tree  li { list-style: none; } 
+ul.pz_tree_vide  li { list-style: none; } 
+
+
+
+
+div.intitule{
+
+	padding-bottom: 4px; 
+	float:none !important;	
+	height: 25px;
+	width:auto;
+	background-color:#FFFFFF;
+	border-bottom: 2px solid black;
+
+}
+ul.pz_tree_vide li div.intitule{
+
+	color:#6F6F6F;
+	background-color:#FFFFFF;
+	border-bottom: 2px solid ;
+	border-color: #BFC0C0;
+
+}
+
+ul.pz_tree_vide li.liClose div.intit_icon{
+background: url(chrome://ProjectBar/skin/fleche_gris_close.PNG)   no-repeat;
+	width:auto;
+
+}
+
+ul.pz_tree_vide li.liOpen div.intit_icon{
+background: url(chrome://ProjectBar/skin/fleche_gris_open.PNG)   no-repeat;
+	width:auto;
+
+}
+ul.pz_tree div.intitule:hover {
+
+	
+	color:#92D3E3;
+	overflow:hidden;
+	
+}
+
+ul.pz_tree_vide  div.intitule:hover{
+  color:#92D3E3;
+	overflow:hidden;
+}
+
+div.intit_icon{
+	/*background-color: #EEEFEF;*/
+	float : left;
+	cursor: pointer;
+	margin-right:15px;
+	width:1px;
+  padding-left:17px;
+  height:20px;
+	
+	background-color:#FFFFFF;
+ /* border: 2px solid yellow;*/
+
+}
+div.intit_nom{
+	/*background-color: #AAAAAA;*/
+	
+	overflow:hidden;
+	width:55%;
+	cursor: pointer;
+	background-color:#FFFFFF;
+ /* border: 2px solid grey;*/
+  float: left;
+
+}
+
+
+div.intit_count{
+	/*background-color: #CACECE;*/
+	float :right;
+	cursor: pointer;
+	width:15%;
+	overflow:hidden;
+	text-align:right;
+	/*background-color:#FFFFFF;
+  border: 2px solid red;*/
+
+}
+
+div.intit_newTodo{
+  float: left;
+  color:#01ED67;
+  width:auto;
+  overflow:hidden;
+  cursor: pointer;
+  
+  /*border: 1px solid black;*/
+  margin-left: 40px;
+  background-color:#F4FEF4;
+  -moz-border-radius:7px;
+  border: 1px solid #01ED67;
+  text-align:center;
+  padding-right:5px;
+  padding-left:5px;
+  padding-bottom:1px;
+  padding-top:1px;
+  
+  
+  
+  
+}
+
+div.intit_newTodo_none{
+  display:none;
+  
+  
+}
+
+div.li_indicatorNew:hover, div.intit_newTodo:hover{
+    color:#0182CD;
+    border-color:#0182CD;
+    background-color: #E3FEFB;
+}
+
+div.li_indicatorNew:active, div.intit_newTodo:active{
+    color:red;
+    border-color:red;
+    background-color: #E3FEFB;
+}
+
+div.les_todos{
+	margin-top:1%;
+	overflow: hidden;
+	background-color:#FFFFFF;
+
+}
+
+li.liOpen    div.intit_icon {
+	background: url(chrome://ProjectBar/skin/fleche_close.PNG)   no-repeat;
+	width:auto;
+	
+}
+li.liClose  div.intit_icon {
+	background: url(chrome://ProjectBar/skin/fleche_open.PNG)  no-repeat;
+	width:auto;
+}
+
+div.intit_icon_load{
+  float : left;
+	cursor: pointer;
+	margin-right:15px;
+	width:1px;
+  padding-left:17px;
+  height:20px;
+	
+	background-color:#FFFFFF;
+  background: url(chrome://ProjectBar/skin/pz_loading2.gif)  no-repeat;
+  width:auto;
+}
+
+
+li.liOpen    div.les_todos {
+	display: block; 
+	margin-bottom:40px;
+	
+}
+li.liClose  div.les_todos {
+	display: none; 
+}
+
+li.li_unchecked , li.li_unchecked {
+
+/*background-color:#FFFFFF;
+border: 2px solid black; */
+
+}
+
+
+
+li.liMsg {
+	cursor: pointer;
+	float:right;
+	width:40%;
+	text-align:right;
+	/*border: 1px solid grey;*/
+	margin-left:30%;
+	
+	
+	
+}
+
+li.liMsg:hover {
+	
+
+
+	text-decoration:underline;
+	/*border: 1px solid grey;*/
+	
+}
+
+
+li.liNotodo {
+
+  color:#0182CD;
+  text-align:center;
+  font-weight:bold;
+
+
+}
+
+div.Msg-noPlanzone, div.MsgNotLogged{
+  text-align:center;
+  font-weight:bold;
+
+}
+
+div.pz_icon_separator{
+width:0px;
+height:45px;
+background:url(chrome://ProjectBar/skin/pz_icon_separator.png)  no-repeat;
+float:left;
+margin-left:2%;
+margin-right:2%;
+
+}
+
+#pz_icon_createTodo{
+width:42px;
+height:45px;
+background:url(chrome://ProjectBar/skin/pz_icon_create.png)  no-repeat;
+float:left;
+
+
+}
+#pz_icon_completeTodo{
+width:42px;
+height:45px;
+background:url(chrome://ProjectBar/skin/pz_icon_complete.png)  no-repeat;
+float:left;
+
+}
+
+.welcome-msg{
+padding-left:15%;
+
+height:48px
+
+}
+
+div.pz_welcomeMsg{
+
+margin-top:12px;
+float:left;
+
+}
+
+div.MsgLogged{
+
+  font-weight:bold;
+ 
+  
+}
+
+div.MsgLogged h2{
+  padding-left:4%
+}
+
+.welcome-titre{
+  padding-left:7%
+}
+
+
+
+
+
+
+
+.li_container{
+ 
+  height: 20px;
+  margin-bottom:5px;
+  border-bottom:1px solid grey;
+  padding-bottom:5px;
+  padding-top:5px;
+  padding-left:10px;
+  padding-right:10px;
+  width:96%;
+  /*border: 1px solid red; */
+ 
+	
+}
+
+li.li_unchecked:hover  .li_container{
+  
+ 
+  background-color: #E3FEFB;
+  /*E7FEFB*/
+ 
+	
+}
+
+div.li_icon{
+  margin-top:3px;
+  background: url(chrome://ProjectBar/skin/pz_checkbox.PNG)   no-repeat;
+  float:left;
+	cursor:pointer;
+	padding-right:5px;
+  width:1px;
+  padding-left:15px;
+
+  height:15px;
+  
+  margin-right:15px;
+  margin-left:4px;
+ /* background-color:#000000;*/
+	
+}
+div.li_icon:hover{
+  background: url(chrome://ProjectBar/skin/pz_checkboxhover.PNG)   no-repeat;
+}
+
+div.li_icon:active{
+  background: url(chrome://ProjectBar/skin/pz_checkboxchecked.PNG)   no-repeat;
+}
+
+div.li_icon_check{
+  margin-top:3px;
+  background: url(chrome://ProjectBar/skin/pz_checkbox_check.PNG)   no-repeat;
+  float:left;
+	cursor:pointer;
+	padding-right:5px;
+  width:1px;
+  padding-left:15px;
+
+  height:15px;
+  
+  margin-right:15px;
+  margin-left:4px;
+ /* background-color:#000000;*/
+}
+
+div.li_icon_check:hover{
+  background: url(chrome://ProjectBar/skin/pz_checkboxchecked.PNG)   no-repeat;
+}
+
+.li_date_passe{
+
+  background-color:#FFD6CD;
+  border:1px solid #D86F58;
+
+	
+}
+
+.li_date_today{
+
+  background-color:#FFF177;
+  border:1px solid #FAB600;
+
+	
+}
+
+.li_date_futur{
+	
+	
+  background-color:#D4FFB7;
+  border:1px solid #A6D08A;
+  
+	
+}
+.li_date_futur, .li_date_today, .li_date_passe{
+	text-align:center;
+	font-weight:bold;
+	width:18%;
+	float:right;
+}
+.li_date_vide{
+	
+	width:22%;
+	float:right;
+	
+
+	
+}
+.li_indicatorNew{
+  
+  
+  color:#01ED67;
+  width:10%;
+  overflow:hidden;
+  cursor: pointer;
+  height:20px;
+  /*border: 1px solid black;*/
+  float:right;
+  margin-right:3%;
+  background-color:#F4FEF4;
+  -moz-border-radius:7px;
+  border: 1px solid #01ED67;
+  text-align:center;
+  padding-right:2px;
+  padding-left:2px;
+
+
+}
+.li_indicatorNonNew{
+
+
+  float:left;
+ 
+  display:none;
+
+}
+
+.li_nom{
+  cursor: pointer;
+  overflow:hidden;
+  /*background-color:#01CA29;*/
+  /*border: 1px solid black; */
+  width:auto;
+  max-width:60%;
+  float:left;
+  /*border: 1px solid grey;*/
+  height:22px;
+  padding-right:2px;
+	
+}
+
+
+
+div.li_nom:hover{
+
+  text-decoration:underline;
+
+  
+}
+/********* MENU GAUCHE FICHE USER ***********/
+
+
+#pz_menuGauche{
+margin-top:1%;
+display: none;
+float: left;
+height: auto;
+width:16%;
+
+/*background-color:#D3D4D4; */  
+background: url(chrome://ProjectBar/skin/images2bis.JPG) repeat-x top;
+background-color:#FFFFFF;
+padding-bottom:1%;
+-moz-border-radius:15px ;
+
+
+}
+
+#pz_menuGauche_photo{
+
+float:left;
+width:70%;
+
+margin-right:15%;
+margin-left:15%;
+margin-top:3%;
+margin-bottom:3%;
+}
+
+
+
+#pz_menuGauche_info, #pz_menuGauche_nom{
+
+float:left;
+width:100%;
+margin-right:15%;
+margin-top:3%;
+-moz-border-radius:6px ;
+text-align:center;
+
+}
+
+div.pz_accessTodo{
+
+margin-top:15px;
+text-align:center;
+-moz-border-radius:9px ;
+padding-top:15px;
+padding-bottom:15px;
+padding-left:15px;
+padding-right:15px;
+background-color:#FF7D00;
+width:auto;
+margin-right:10%;
+font-style:italic;
+color:white;/*#22CB22*/
+cursor:pointer
+
+}
+#pz_notLogged{
+float:right;
+margin-top:2%;
+margin-right:34%;
+}
+#pz_notLogged{
+float:right;
+margin-top:2%;
+margin-right:34%;
+}
+#pz_accessTodo{
+float:right;
+}
+
+#pz_accessTodo:hover, #pz_notLogged:hover{
+
+color:#FDCCAA;
+text-decoration:none;
+}
+
+#pz_accessTodo:hover:active, #pz_notLogged:hover:active{
+
+color:red;
+}
+
+
+div.MsgInteractif:hover{
+color:red;
+cursor:pointer;
+text-decoration:underline;
+
+
+}
+
+div.MsgInteractif:active{
+color:red;
+cursor:pointer;
+text-decoration:none;
+
+}
+
+
+#pz_menuGauche_titre{
+border: 1px solid grey;
+-moz-border-radius:6px ;
+background-color:#EDEDED;
+margin-left:10%;
+margin-right:10%;
+margin-top:10%;
+text-align:center;
+width:80%;
+padding-top:5px;
+padding-bottom:5px;
+color: #000000;
+
+}
+
+/******** MENU DROIT STAT *************/
+
+
+#pz_menuDroit{
+margin-top:20px;
+padding-left:5px;
+padding-right:5px;
+float: right;
+height: auto;
+width:19%;
+background: url(chrome://ProjectBar/skin/pz_menu_droit.png) repeat-x top;
+background-color:#FFFFFF;
+text-align:center;
+
+-moz-border-radius:7px; 
+border:1px solid #53BDFF;
+color:#2275A8;
+}
+
+.element-nonvisible{
+  display:none !important;
+ 
+}
+
+.element-visible{
+  display:block !important;
+ 
+}
+
+/************** NEW TODO ********************/
+.add_icon{
+
+  margin-bottom:5px;
+  margin-left:3px;
+  margin-top:3px;
+  background: url(chrome://ProjectBar/skin/pz_add.gif)   no-repeat;
+  float:right;
+	cursor:pointer;
+	
+  width:1px;
+  padding-left:20px;
+
+  height:35px;
+  
+
+  margin-left:19px;
+ /* background-color:#000000;*/
+
+
+}
+
+.add_titre{
+  
+  overflow:hidden;
+  /*background-color:#01CA29;*/
+  /*border: 1px solid black; */
+  width:40%;
+  float:left;
+  /*border: 1px solid grey;*/
+  height:26px;
+  margin-left:5px;
+}
+.add_projet{
+  
+  overflow:hidden;
+  /*background-color:#01CA29;*/
+  /*border: 1px solid black; */
+  width:30%;
+  float:left;
+  /*border: 1px solid grey;*/
+  height:25px;
+  padding-top:1px;
+  padding-left:15px;
+}
+
+li.li_unchecked:hover  li.li_Add{
+  background-color: #E7FEFB;
+}
+
+li.li_Add{
+ 
+  height: 23px;
+   width:96%;
+  float:left;
+ margin-top:10px;
+  border-top:1px dashed green;
+  padding-bottom:10px;
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+  -moz-border-radius-bottomleft:10px;
+  -moz-border-radius-bottomright:10px;
+  /*border: 1px solid red; */
+  
+ 
+	
+}
+
+li.li_Add:hover{
+background-color: #C3FEC1;
+}
+.add_textbox{
+width:100%;
+
+}
+
+.add_comboboxProjet{
+width:100%;
+}
+
+
+.add_date{
+
+	width:18%;
+	float:right;
+	padding-bottom:5px;
+
+	
+}
+select.add_calendar_date_today{
+  
+	
+	width:100%;
+	float:left;
+
+  background-color:#FFF177;
+  
+  text-align:center;
+  
+  
+
+}
+select.add_calendar_date_before{
+  
+	
+	width:100%;
+	float:left;
+	background-color:#FFD6CD;
+	text-align:center;
+  
+  
+
+}
+select.add_calendar_date_after{
+  
+	
+	width:100%;
+	float:left;
+
+  background-color:#D4FFB7;
+  
+  text-align:center;
+  
+  
+
+}
+
+div.add_calendar_icon{
+
+  margin-top:2px;
+  background: url(chrome://ProjectBar/skin/pz_calendar.gif)   no-repeat;
+  float:right;
+  cursor:pointer;
+  width:1px;
+  padding-left:20px;
+  height:17px;
+
+}
+
+/***** REFRESH LINK *******/
+
+#pz_refreshContainer{
+
+float:right;
+margin-top:1%;
+padding-left:5px;
+padding-right:5px;
+padding-top:1%;
+padding-bottom:1%;
+width:19%;
+-moz-border-radius:7px;
+border:1px solid #53BDFF;
+height:auto;
+background: url(chrome://ProjectBar/skin/pz_menu_droit.png) repeat-x top;
+
+color:#2275A8;
+cursor:pointer;
+}
+
+
+
+
+#pz_imageRefresh{
+float:left;
+height:27px;
+width:27px;
+background:url(chrome://ProjectBar/skin/pz_refresh3Light.png) no-repeat;
+margin-left:23%;
+
+}
+#pz_refreshContainer:hover #pz_labelRefresh{
+
+text-decoration:underline;
+
+
+}
+
+#pz_refreshContainer:active #pz_labelRefresh{
+
+color:red;
+
+}
+
+#pz_refreshContainer:hover:active #pz_imageRefresh{
+
+background:url(chrome://ProjectBar/skin/pz_refresh3Sombre.png) no-repeat;
+
+}
+
+
+#pz_refreshContainer:hover #pz_imageRefresh{
+
+background:url(chrome://ProjectBar/skin/pz_refresh3.png) no-repeat;
+
+}
+#pz_labelRefresh{
+margin-top:2px;
+float:left;
+text-align:right;
+overflow:hidden;
+margin-left:15px;
+
+}
+.pz_themeDefaut{
+	background: url(chrome://ProjectBar/skin/pz_bg.png) repeat-x top;
+    font-family:sans-serif;
+}
+.pz_themeDefaut #pz_header{
+	font-size:1.5em;
+}
+.pz_themeDefaut #pz_corpsPrincipal{
+	font-size:1.3em;
+}
+.pz_themeDefaut #pz_message{
+    font-size: 1.4em ;
+	color: #D80101 ;
+}
+.pz_themeDefaut div.intitule{
+	font-size: 14pt;
+}
+.pz_themeDefaut .li_date_futur, .pz_themeDefaut .li_date_today, .pz_themeDefaut .li_date_passe{
+	font-size: 13pt;
+}
+.pz_themeDefaut #pz_labelRefresh{
+	font-size:12pt;
+
+}
+.pz_themeDefaut div.les_todos,.pz_themeDefaut #pz_menuDroit, .pz_themeDefaut .add_comboboxProjet,.pz_themeDefaut .add_textbox, 
+.pz_themeDefaut .add_date,.pz_themeDefaut  select.add_calendar_date_today,.pz_themeDefaut  select.add_calendar_date_before, 
+.pz_themeDefaut select.add_calendar_date_after{
+	font-size:12pt;
+}
+.pz_themeDefaut div.Msg-noPlanzone, .pz_themeDefaut div.MsgNotLogged, .pz_themeDefaut div.intitule, .pz_themeDefaut div.MsgLogged{
+		font-size:13pt;
+}
+.pz_themeDefaut div.MsgLogged,.pz_themeDefaut li.liMsg , .pz_themeDefaut div.li_nom:hover,.pz_themeDefaut #pz_menuGauche, .pz_themeDefaut #pz_menuDroit{
+	color:#000001;
+}
+.pz_themeDefaut #pz_header,.pz_themeDefaut #pz_corpsPrincipal, .pz_themeDefaut #pz_labelRefresh{
+	color:black;
+}
+.pz_themeDefaut div.pz_accessTodo{
+	background:url(chrome://ProjectBar/skin/pz_bouton_bg.PNG) repeat-x ;
+	color:white;
+	font-size:14pt;
+}
+.pz_themeDefaut #pz_accessTodo:hover, .pz_themeDefaut #pz_notLogged:hover{
+
+	color:#FDCCAA;
+	text-decoration:none;
+}
+
+/*** Blue Theme ***/
+
+.pz_blueTheme{
+	background: url(chrome://ProjectBar/skin/pz_bg2.png) repeat-x top;
+    font-family:"Comic Sans MS";
+   
+}
+.pz_blueTheme #pz_header{
+	font-size:1.4em;
+}
+.pz_blueTheme #pz_corpsPrincipal{
+	font-size:1.2em;
+}
+.pz_blueTheme #pz_message{
+    font-size: 1.3em ;
+	color: #D80101 ;
+}
+
+.pz_blueTheme .li_date_futur, .pz_blueTheme .li_date_today, .pz_blueTheme .li_date_passe{
+	font-size: 10pt;
+}
+.pz_blueTheme #pz_labelRefresh{
+	font-size:16px;
+	/*color:#2275A8;*/
+}
+.pz_blueTheme div.les_todos,.pz_blueTheme #pz_menuDroit, .pz_blueTheme .add_comboboxProjet,.pz_blueTheme .add_textbox, 
+.pz_blueTheme .add_date,.pz_blueTheme  select.add_calendar_date_today,.pz_blueTheme  select.add_calendar_date_before, 
+.pz_blueTheme select.add_calendar_date_after{
+	font-size:11pt;
+}
+.pz_blueTheme div.Msg-noPlanzone, .pz_blueTheme div.MsgNotLogged, .pz_blueTheme div.intitule, .pz_blueTheme div.MsgLogged{
+		font-size:13pt;
+}
+.pz_blueTheme div.MsgLogged,.pz_blueTheme div .MsgNotLogged,.pz_blueTheme li.liMsg , .pz_blueTheme div.li_nom:hover,
+.pz_blueTheme #pz_menuGauche,.pz_blueTheme div.pz_accessTodo, .pz_blueTheme #pz_labelRefresh{
+	color:#0182CD;
+}
+.pz_blueTheme #pz_header,.pz_blueTheme #pz_corpsPrincipal{
+	color:black;
+}
+.pz_blueTheme div.pz_accessTodo{
+	background:url(chrome://ProjectBar/skin/pz_bouton_bg2.PNG) repeat-x ;
+	border:1px solid #0182CD;
+}
+
+.pz_blueTheme #pz_accessTodo:hover, .pz_blueTheme #pz_notLogged:hover{
+
+	color:#92D3E3;
+	text-decoration:none;
+}
+
+

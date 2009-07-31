@@ -1,0 +1,37 @@
+﻿<!ENTITY titre "Preferences configuration">
+<!ENTITY desc.titre "Preferences">
+
+<!ENTITY tab.id "Identification">
+<!ENTITY tab.refresh "Refresh">
+<!ENTITY tab.reset "Authentification">
+<!ENTITY tab.son "Sound">
+<!ENTITY tab.theme "Theme">
+
+<!ENTITY grpbox.id.titre "Enter your identifiers">
+<!ENTITY grpbox.id.status.good "You are logged">
+<!ENTITY grpbox.id.status.wrong "You are not logged">
+<!ENTITY grpbox.id.mail "Your mail :">
+<!ENTITY grpbox.id.pass "Your password :">
+<!ENTITY grpbox.id.validate "Validate">
+
+<!ENTITY grpbox.son.titre "Sound options">
+<!ENTITY grpbox.son.check "Enable the sound">
+<!ENTITY grpbox.son.radio.def "Planzone standard file">
+<!ENTITY grpbox.son.radio.perso "Personalized file :">
+<!ENTITY grpbox.son.browse "Browse...">
+<!ENTITY grpbox.son.replay "Replay">
+
+<!ENTITY refresh-time "Refresh time">
+<!ENTITY refresh-automatique "Automatic refresh">
+<!ENTITY regler "Set manually">
+
+<!ENTITY reset-title "Reset your Planzone ID">
+<!ENTITY can-reset "You can reset your Planzone ID">
+<!ENTITY Reset-Authorization-Settings "Reset Authorization Settings">
+
+<!ENTITY theme-title "Chose a theme ">
+<!ENTITY theme-label "You can chose a theme for your ProjectBar, enjoy">
+<!ENTITY theme-defaut "default theme">
+<!ENTITY theme-blue "blue theme">
+
+<!ENTITY Apply "To apply">

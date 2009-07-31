@@ -1,0 +1,38 @@
+﻿<!ENTITY titre "Configuration des préférences">
+<!ENTITY desc.titre "Préférences">
+
+<!ENTITY tab.id "Identification">
+<!ENTITY tab.refresh "Rafraîchissement">
+<!ENTITY tab.reset "Authentification">
+<!ENTITY tab.son "Son">
+<!ENTITY tab.theme "Thème">
+
+<!ENTITY grpbox.id.titre "Entrez vos identifiants">
+<!ENTITY grpbox.id.status.good "Vous êtes identifié(e)">
+<!ENTITY grpbox.id.status.wrong "Vous n'êtes pas identifié(e)">
+<!ENTITY grpbox.id.mail "Votre adresse mail :">
+<!ENTITY grpbox.id.pass "Votre mot de passe :">
+<!ENTITY grpbox.id.validate "Valider">
+
+<!ENTITY grpbox.son.titre "Options du son">
+<!ENTITY grpbox.son.check "Activer le son">
+<!ENTITY grpbox.son.radio.def "Fichier standard Planzone">
+<!ENTITY grpbox.son.radio.perso "Fichier personnalisé :">
+<!ENTITY grpbox.son.browse "Parcourir...">
+<!ENTITY grpbox.son.replay "Rejouer">
+
+<!ENTITY refresh-time "Temps de rafraîchissement">
+<!ENTITY refresh-automatique "Rafraîchissement automatique">
+<!ENTITY regler "Régler soi-même">
+
+<!ENTITY reset-title "Réinitialisation de vos identifiants Planzone">
+<!ENTITY can-reset "Vous pouvez réinitialiser vos identifiants ">
+<!ENTITY Reset-Authorization-Settings "Réinitialiser l'authentification">
+
+<!ENTITY theme-title "Choisissez un thème ">
+<!ENTITY theme-label "Vous avez la possibilité de choisir un thème pour votre ProjectBar">
+<!ENTITY theme-defaut "thème par défaut">
+<!ENTITY theme-blue "thème bleu">
+
+
+<!ENTITY Apply "Appliquer">

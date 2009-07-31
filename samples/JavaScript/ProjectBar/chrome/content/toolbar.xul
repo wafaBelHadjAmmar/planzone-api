@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- the main file, which will creates the plug-in and his differents parts -->
+
+<!--the css -->
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet href="chrome://ProjectBar/skin/toolbar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://ProjectBar/skin/panel.css" type="text/css"?>
+<?xml-stylesheet href="chrome://ProjectBar/skin/ProjectBar.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://ProjectBar/locale/toolbar.dtd">
+
+
+<!-- the overlay will contain all of the the XUL code -->
+<overlay id="pz_TB-Overlay"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<stringbundleset id="stringbundleset">
+        <stringbundle id="strings_planzone" src="chrome://ProjectBar/locale/planzone.properties"/>
+		<stringbundle id="propriete_planzone" src="chrome://ProjectBar/content/pz.properties"/>
+	</stringbundleset>
+	
+	
+	 <preferences>
+		<preference id="pz_firstTime"       name="extensions.planzone.firstTime"           type="bool" />
+	</preferences>
+	
+	
+<!-- ================================================================================================================= -->  
+  <!-- import the javaScript -->
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/lib.js"/>
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_toolbar.js" />
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_statusbar.js"/>
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_panel.js"/>
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_pref.js"/>
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_sha_1.js" />
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_password.js" />
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_API.js" />
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_oauth.js" />
+  <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_uninstall.js" />
+  <script type="application/x-javascript">
+		<![CDATA[
+		
+		this.addEventListener("load", function(){PzPanel.init();}, false);
+		this.addEventListener("load", function(){UninstallObserver.register();}, false);
+		
+		
+		]]>
+	</script>
+  
+   
+
+
+	
+  
+
+<!-- ================================================================================================================= -->
+	<!-- the main toolBox -->
+<!--
+	<toolbox id="navigator-toolbox">
+		    
+		    <toolbar id="pz_TB-Toolbar" toolbarname=" Toolbar" 
+                context="toolbar-context-menu" 
+                 hidden="false" persist="hidden">
+				
+			
+				<toolbaritem flex="0">
+					
+					
+					<toolbarbutton id="pz_TB-Button" tooltiptext="&bouton.tooltip;"
+              		 	label="&bouton.label;" oncommand="PzToolbar.goPlanzone(event)" />
+
+				 </toolbaritem>
+	
+			</toolbar>
+    </toolbox> -->
+<!-- ================================================================================================================= -->
+
+	<!--the panel -->
+
+    <splitter id="pz_ContentSplitter"/>
+  
+  
+<vbox id="appcontent" > 
+<splitter id="pz_Splitter" collapsed ="true" />
+       <vbox id="pz_panel" collapsed="true" > 
+          <hbox id="pz_panel_tab" >
+            <hbox>
+                <panelbar id="pz_panelBar" >
+                   
+                        
+                            <hbox>
+								<hbox class="pz_panelBouton">
+									<toolbaritem class="pz_bord_gauche">
+										<vbox width="3px"/>
+									</toolbaritem>
+									<toolbaritem  class="pz_panel_toolbouton" onclick="PzPanel.switchDeck1()">
+									<hbox>
+										<vbox>
+										<spacer height="7px"/>
+									  <image id="pz_icon" src="chrome://ProjectBar/skin/pz_CK_checked_blue.PNG" />
+										</vbox>
+										
+										<vbox>
+										<spacer height="4px"/>
+									  <label class="pz_toolbarLabel" value="&toolbar.todo;" />
+										</vbox>
+									</hbox>
+									</toolbaritem>
+									<toolbaritem class="pz_bord_droit">
+										<vbox width="9px"/>
+									</toolbaritem>
+								  
+								   <!-- <toolbarbutton   class="pz_panel_toolbouton" oncommand="PzPanel.switchDeck2()">
+									  <image id="pz_icon" src="chrome://ProjectBar/skin/pz_mail.png" height="24" width="24" />
+									  <label value="Discussion" />
+									</toolbarbutton>
+									
+									<toolbarbutton style="align:left" class="pz_panel_toolbouton" oncommand="PzPanel.switchDeck3()">
+									  <image id="pz_icon" src="chrome://ProjectBar/skin/pz_infoIcon.png" />
+									  <label value="Event" />
+									</toolbarbutton> -->
+								</hbox>
+                            </hbox>
+                        
+                        
+                </panelbar>
+              </hbox>
+              
+              <spacer flex="1"/>
+              
+              <hbox>
+				<vbox>
+					<spacer flex="2"/>
+						<toolbaritem flex="2" id="pz_panel_option" popup="pz_menulabel">
+								
+								<label id="pz_panel_option_label" value="&Options;"/>
+								<spacer width="13"/>
+								
+							
+						</toolbaritem>
+				</vbox>
+				<spacer width="13px"/>
+                   
+				   
+				   <toolbaritem  >
+						<vbox>
+							<spacer flex="4"/>
+								<box id="pz_panel_reduire" flex="12" onclick="PzPanel.showPanel()"/>
+								
+							<spacer flex="2"/>
+						</vbox>
+				   </toolbaritem>
+              </hbox>
+   
+           </hbox>
+            
+           <separator id="pz_separator"/>
+            
+           <hbox flex="1">
+              <box id="pz_panel_box" flex="1">
+              
+                <deck id="pz_deck" flex="1" selectedIndex="0">
+                 
+                       <browser id="pz_browser" flex="1" 
+                        src="chrome://ProjectBar/content/pz_panel.html" onload="PzPanel.initPanel()"/>
+                       <!--<textbox id="pz_panel_textbox" value="..." flex="1" multiline="true" rows="12" />-->
+
+						
+                </deck>
+              </box>
+           </hbox>
+      </vbox>
+</vbox>
+  
+
+ 
+  
+  
+<!-- ================================================================================================================= -->
+	<!-- the statusBar which appears in the footer -->
+	
+	<statusbar id="status-bar"  >
+		
+		<statusbarpanel id="pz_myicon" class="pz_evt_item">  
+        <toolbarbutton oncommand="PzPanel.showPanel()" tooltip="pz_montooltip" 
+        context="pz_menustatusbar">
+          <image id="pz_icon" src="chrome://ProjectBar/skin/pz_logo.PNG" height="17" width="17" />
+        </toolbarbutton>
+		<spacer width="5px"/>
+        <label tooltip="pz_montooltip" 
+        context="pz_menustatusbar" id="pz_tooltiplabel" value="&statusbarpanel.label;" class="pz_new_todos_normal"/>
+    
+			
+		
+        
+        
+      </statusbarpanel>
+	</statusbar>	
+	
+<!-- ================================================================================================================= -->
+	<popupset id="mainPopupSet" >
+	
+       <!-- the tooltip which appears in the footer when the mouse is above it -->
+      <tooltip id="pz_montooltip" orient="vertical" noautohide="true" height= "100em">
+      
+          <hbox>
+            <vbox pack="center" align="center">
+              <image id="logo" width="30" height="30" src="chrome://ProjectBar/skin/pz_logo.PNG"/>
+            </vbox>
+            <spacer style="width: 8px"/>
+            <vbox>
+              <label class="pz_infoImportante" value="&tooltip.titre;" />               
+              <spacer style="height: 4px"/>    
+              <hbox>
+                <label id="pz_nbTodo"  class="pz_infoImportante" value="0" />
+                <label id="pz_labelpanel" style="align:center" value="&tooltip.todo;" />  
+              </hbox>   
+              <!--
+              <hbox>
+                  <label id="pz_nbMess" class="pz_infoImportante" value="0" persist="value"/>
+                  <label id="pz_labelpanel2" style="align:center" value="&tooltip.message;"/>  
+              </hbox>
+              <hbox>
+                  <label id="pz_nbAtt1" class="pz_infoImportante" value="0" persist="value"/>
+                  <label id="pz_labelpanel3" style="align:center" value="&tooltip.3;"/>  
+              </hbox>
+              <hbox>
+                  <label id="pz_nbAtt2" class="pz_infoImportante" value="0" persist="value"/>
+                  <label id="pz_labelpanel4" style="align:center" value="&tooltip.4;"/>  
+                  
+              </hbox>-->
+            </vbox>
+          </hbox>
+      </tooltip>
+      
+<!-- ================================================================================================================= -->
+       <!-- the menu which appears when the uses the right-click on the statusBar -->
+       
+      <popup id="pz_menustatusbar" orient="vertical">
+			<menuitem label="&menu.apropos;" accesskey="&menu.apropos.key;" oncommand="PzPanel.pz_openApropos()" />
+				<menuseparator/>
+				
+			<menuitem  oncommand="PzStatusBar.openPref(0);" >
+			  <image src="chrome://ProjectBar/skin/pz_pref_icon.png"/>
+			  <label value="&menu.preference;" accesskey="&menu.preference.key;"/>
+			  
+			</menuitem>
+				<menuseparator/>
+		<!--	<menuitem  oncommand="PzStatusBar.misAJourMeteo()" >
+			
+			  <image src="chrome://ProjectBar/skin/pz_meteo2.png" height="16" width="16"/>
+			  <label value="&menu.majmeteo;" accesskey="&menu.majmeteo.key;"/>
+			  
+			</menuitem>
+				<menuseparator/>		
+			<menuitem   oncommand="PzStatusBar.beep()" >
+			  <image src="chrome://ProjectBar/skin/pz_note.png" height="16" width="16"/>
+			  <label value="beep" accesskey="b"/>
+			  
+			</menuitem>-->
+					
+			<!--<menuitem label="Test" accesskey="T" oncommand="PzStatusBar.test()"/>-->
+			<menuitem label="&menu.reset.tooltip;" accesskey="&menu.reset.tooltip.key;" oncommand="PzStatusBar.reset()"/>	
+			<!--<menuitem label="clear" accesskey="c" oncommand="PzStatusBar.clear()"/>	
+			<menuitem label="get" accesskey="g" oncommand="PzStatusBar.get()"/>	-->
+	
+      </popup>
+	  
+	  
+	  
+	  
+	  
+	  
+	   <menupopup id="pz_menulabel" orient="vertical" position="before_end">
+			
+				
+			<menuitem label="&menu.son;" accesskey="&menu.son.key;" oncommand="PzStatusBar.openPref(1)" />
+				<menuseparator/>
+				
+			<!--<menuitem label="Identification" accesskey="i" oncommand="PzStatusBar.openPref(0)" />
+				<menuseparator/>-->
+				
+			<menuitem label="&menu.refresh;" accesskey="&menu.refresh.key;" oncommand="PzStatusBar.openPref(2)" />
+				<menuseparator/>
+	
+			<menuitem label="&menu.reset;" accesskey="&menu.reset.key;" oncommand="PzStatusBar.openPref(3)"/>	
+				<menuseparator/>
+			<menuitem label="&menu.theme;" accesskey="&menu.theme.key;" oncommand="PzStatusBar.openPref(4)"/>	
+			
+	
+      </menupopup>
+	
+  </popupset>
+
+
+  
+
+  
+
+	
+</overlay>

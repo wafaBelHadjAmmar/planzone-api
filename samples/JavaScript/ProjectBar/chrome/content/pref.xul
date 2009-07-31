@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css" href="chrome://ProjectBar/skin/pref.css" ?>
+
+<!DOCTYPE window SYSTEM "chrome://ProjectBar/locale/pref.dtd">
+
+
+<prefwindow  title="&titre;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	windowtype="prefwindow"
+	buttons="accept,cancel"
+	ondialogaccept="return PzPref.OK();"
+	onload="PzPref.selectTab(window.arguments[0]);">
+       
+  <stringbundleset id="stringbundleset">
+          <stringbundle id="strings_planzone" src="chrome://ProjectBar/locale/planzone.properties"/>
+          <stringbundle id="propriete_planzone" src="chrome://ProjectBar/content/pz.properties"/>
+  </stringbundleset>
+
+  <hbox>
+
+  </hbox>
+    <prefpane id="timetrack-prefpane" orient="vertical">
+    
+    <preferences>
+      
+
+      <preference id="pz_pref_son_on"       name="extensions.planzone.pref.son.on"           type="bool" />
+      <preference id="pz_pref_id_login"     name="extensions.planzone.pref.id.login"         type="bool" />
+      <preference id="pz_pref_mail"         name="extensions.planzone.pref.id.mail"          type="string" />
+      <preference id="pz_pref_son_chemin"   name="extensions.planzone.pref.son.chemin"       type="string" />
+      <preference id="pz_pref_nbtodos"   	  name="extensions.planzone.pref.nbtodos"          type="int" />
+      <preference id="pz_pref_nbtodosNew"   	  name="extensions.planzone.pref.nbtodosNew"          type="int" />
+      <preference id="pz_pref_refresh_time" name="extensions.planzone.pref.refresh.time"     type="int" />
+      <preference id="pz_pref_refresh_bool" name="extensions.planzone.pref.refresh.bool"     type="bool" />
+    </preferences>
+    <hbox>
+    
+      <tabbox id="pz_tabbox" >
+      <description style="	background: #FFF url('chrome://ProjectBar/skin/pz_panel_toolbar_BG.png') repeat-x;
+                            
+                            min-width:300px;
+                           
+                            border-bottom: 1px solid #757575;
+                            font-size:2em;">
+        
+              <image src='chrome://ProjectBar/skin/pz_pref.png' height="35" width="35" />
+              <spacer style="width: 150px"/>
+              <label value="&desc.titre;"/>
+        
+           
+            
+           
+          
+         
+       </description>
+      
+       <spacer style="height: 6px"/>	
+       
+        <tabs>
+          <!--<tab id="pz_tabpanel0" label ="&tab.id;"/>-->
+          <tab id="pz_tabpanel1" label ="&tab.son;" />
+          <tab id="pz_tabpanel2" label ="&tab.refresh;" />
+          <tab id="pz_tabpanel3" label ="&tab.reset;" />
+          <tab id="pz_tabpanel4" label ="&tab.theme;" />
+        </tabs>
+        <tabpanels id="pz_tabpanels">
+          
+          <tabpanel id="pz_panel_son">
+            <spacer style="height: 6px"/>
+            <vbox flex="1">
+              <groupbox flex="1">
+                <caption label="&grpbox.son.titre;"/>
+                <hbox  flex="1">
+                    <spacer />
+                    <vbox>
+                        <spacer style="height: 10px"/>
+                        <image id="pz_pref_icon_son" src="chrome://ProjectBar/skin/cle-de-sol.png" height="84" width="84" persist="src"/>
+                    </vbox>
+                    <spacer />
+                    <vbox>
+                        <hbox>
+                          <checkbox label="&grpbox.son.check;"  id="pz_pref_son_check"
+                                    onclick="PzPref.soundCK()" persist="checked"/>
+                       
+                        </hbox>
+                        <spacer style="height: 20px"/>
+                        <hbox>
+                           
+                          <spacer style="width: 20px"/>
+                          <radiogroup id="pz_pref_son_choix"  persist="selected,disabled">
+                            
+                            <radio id="pz_pref_son_choix_defaut" label="&grpbox.son.radio.def;" value="0"
+                                   onclick="document.getElementById('pz_pref_btnBrowse').disabled = true,
+                                            document.getElementById('pz_pref_folderName').disabled = true"
+                                   persist="selected,disabled"/>
+                            
+                            <radio id="pz_pref_son_choix_parcourir" label="&grpbox.son.radio.perso;" value="1"
+                                   onclick="document.getElementById('pz_pref_btnBrowse').disabled = this.checked,
+                                            document.getElementById('pz_pref_folderName').disabled = this.checked" 
+                                   persist="selected,disabled"/>
+                          </radiogroup>
+                        </hbox>
+                         
+                     </vbox>
+                   </hbox>
+                   <spacer style="height: 20px"/>
+                   <hbox flex="1">
+                      <vbox flex="1">
+                          <hbox id="pz_pref_son_parcourir" flex="1">
+                            <spacer style="width: 20px"/>
+                            <textbox id="pz_pref_folderName" flex="1" persist="disabled" preference='pz_pref_son_chemin' />
+                            <button  id="pz_pref_btnBrowse" label="&grpbox.son.browse;" oncommand="PzPref.onBrowse()" persist="disabled"/>
+                          </hbox>
+                          
+                          <spacer style="height: 10px"/>
+                          
+                          <hbox>
+                            <spacer style="width: 20px"/>
+                            <button id="pz_pref_btnRejouer"  label="&grpbox.son.replay;" oncommand="PzPref.rePlaySound()" persist="disabled"/>
+                          </hbox>
+                      </vbox>
+                  
+                  </hbox>
+				  
+				<spacer style="height: 20px"/>
+						
+						
+							<button  collapsed="true" id="pz_applySon" oncommand="PzPref.setSon()" label="&Apply;" />
+                
+              </groupbox>
+            </vbox>						
+          </tabpanel>
+          <tabpanel id="pz_panel_refresh">
+            <spacer style="height: 6px"/>
+				
+                <vbox flex="1">
+                    <groupbox flex="1">
+                        <caption label="&refresh-time;"/>
+						<hbox>
+							<vbox flex="2" >
+									
+									
+							</vbox>
+							
+							<vbox flex="4">
+							
+							
+									<hbox  flex="2">
+									<spacer style="width: 80px"/>
+										<checkbox label="&refresh-automatique;"  id="pz_pref_refresh_check"
+												  onclick="PzPref.refreshCK()" persist="disabled" />
+								   
+							  
+									</hbox>
+									<spacer style="height: 15px"/>
+									<hbox flex="1">
+										<spacer style="width: 100px"/>
+										<radiogroup id="pz_pref_refresh_choix"  persist="selected,disabled" >
+										
+											<radio id="pz_pref_refresh_choix_5" label="5 min" value="0"
+												   onclick="document.getElementById('pz_pref_refresh_txtbox').disabled = true,
+															document.getElementById('pz_pref_refresh_label').disabled = true" 
+												   persist="selected,disabled"/>
+											
+											<radio id="pz_pref_refresh_choix_10" label="10 min" value="1"
+												   onclick="document.getElementById('pz_pref_refresh_txtbox').disabled = true,
+															document.getElementById('pz_pref_refresh_label').disabled = true" 
+												   persist="selected,disabled"/>
+												   
+											<radio id="pz_pref_refresh_choix_20" label="20 min" value="2"
+												   onclick="document.getElementById('pz_pref_refresh_txtbox').disabled = true,
+															document.getElementById('pz_pref_refresh_label').disabled = true" 
+												   persist="selected,disabled"/>
+											
+											<radio id="pz_pref_refresh_choix_man" label="&regler;" value="3"
+												   onclick="document.getElementById('pz_pref_refresh_txtbox').disabled = this.selected,
+															document.getElementById('pz_pref_refresh_label').disabled = this.selected" 
+												   persist="selected,disabled"/>
+										</radiogroup>
+									
+									</hbox>
+									<spacer style="height: 15px"/>
+									<hbox >
+										<spacer style="width: 80px"/>
+										<textbox id="pz_pref_refresh_txtbox"  persist="disabled" multiline="true" cols="4" decimalplaces="0"
+												 type="number" min="1" increment="1" preference="pz_pref_refresh_time"/>
+										<spacer style="width: 4px"/>
+										<label id="pz_pref_refresh_label" value=" min"/>
+										 <spacer style="width: 60%"/>
+										
+									</hbox>
+							</vbox>
+						</hbox>
+						<spacer flex="1"/>
+						
+						
+							<button collapsed="true" id="pz_applyRefresh" oncommand="PzPref.setRefresh()" label="&Apply;" />
+                    </groupbox>
+                
+                </vbox>
+           </tabpanel>
+		   <tabpanel id="pz_panel_reset">
+				<groupbox flex="1">
+				  <caption label="&reset-title;"></caption>
+				  <label id="pz_pref_reset_label" value="&can-reset;"/>
+				  <spacer flex="1"/>
+				  <button  id="applyAuth" oncommand="PLANZONEPLUGIN.logout()" label="&Reset-Authorization-Settings;" />
+				</groupbox>
+		   </tabpanel>
+			
+		   
+		   <tabpanel id="pz_panel_theme">
+				<groupbox flex="1">
+				  <caption label="&theme-title;"></caption>
+					<vbox flex="1">
+					
+						<hbox >
+						  <spacer flex="2"/>
+						  <label id="pz_pref_theme_label" value="&theme-label;"/>
+						  <spacer flex="2"/>
+						</hbox>
+						
+						<hbox >
+								<spacer flex="2"/>
+								<radiogroup id="pz_pref_theme_choix"  >
+												
+													<radio id="pz_pref_theme1" label="&theme-defaut;" value="0"											   
+														   persist="selected"/>
+													
+													<radio id="pz_pref_theme2" label="&theme-blue;" value="1"											   
+														   persist="selected"/>
+								</radiogroup>
+								<spacer flex="2"/>
+						</hbox>
+						
+						<spacer flex="1"/>
+						
+						
+							<button collapsed="true" id="pz_applyTheme" oncommand="PzPref.setTheme()" label="&Apply;" />
+						
+					</vbox>
+				</groupbox>
+		   </tabpanel>
+		   
+		   
+        </tabpanels>
+      </tabbox>
+      </hbox>
+    </prefpane >
+    
+    <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_pref.js" />
+	<script type="application/x-javascript" src="chrome://ProjectBar/content/pz_panel.js" />
+    <script type="application/x-javascript" src="chrome://ProjectBar/content/pz_sha_1.js" />
+    <script type="application/x-javascript" src="chrome://ProjectBar/content/lib.js"/>
+	<script type="application/x-javascript" src="chrome://ProjectBar/content/pz_password.js" />
+	<script type="application/x-javascript" src="chrome://ProjectBar/content/pz_API.js" />
+	<script type="application/x-javascript" src="chrome://ProjectBar/content/pz_oauth.js" />
+	<script type="application/x-javascript">
+		<![CDATA[
+		
+		this.addEventListener("load", function(){PzPref.init();}, false);
+		
+		
+		]]>
+	</script>
+	
+	
+
+</prefwindow>
