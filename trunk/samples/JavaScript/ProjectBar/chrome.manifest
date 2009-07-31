@@ -1,0 +1,11 @@
+content ProjectBar chrome/content/
+
+locale ProjectBar fr-FR chrome/locale/fr-FR/
+locale ProjectBar en-US chrome/locale/en-US/
+locale ProjectBar de-DE chrome/locale/de-DE/
+
+
+overlay chrome://browser/content/browser.xul chrome://ProjectBar/content/toolbar.xul
+
+skin ProjectBar cs2009 chrome/skin/
+

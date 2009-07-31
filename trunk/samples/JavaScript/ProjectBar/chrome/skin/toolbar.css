@@ -1,0 +1,60 @@
+#pz_TB-Button {
+    list-style-image: url("chrome://ProjectBar/skin/pz_logo.PNG");
+
+}
+
+
+
+.pz_new_todos_alerte{
+  margin:0;
+  /* padding:0;
+  border:0;*/
+  margin-left:2px;
+  margin-right:2px;
+ 
+  font-size:11px;
+  color: white;
+  background-color: #FF0000;
+
+
+
+}
+
+.pz_new_todos_normal{
+ 
+  margin-left:2px;
+  margin-right:2px;
+  font-weight:normal;
+  font-size:11px;
+  
+  /*cursor: pointer;*/
+}
+
+.pz_new_todos_new{
+ 
+  margin-left:2px;
+  margin-right:2px;
+  font-weight:bold;
+  font-size:11px;
+  color:#009E3F;
+  text-decoration:underline;
+  /*cursor: pointer;*/
+}
+
+
+#pz_apropos{
+background-color: white;
+}
+
+#pz_apropos_toolbar{
+-moz-appearance: none;
+}
+
+.pz_infoImportante{
+font-weight: bold;
+}
+
+.pz_evt_item:hover{
+
+cursor: pointer;
+}

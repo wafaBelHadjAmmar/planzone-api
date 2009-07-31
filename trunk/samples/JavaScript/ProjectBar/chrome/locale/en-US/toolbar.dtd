@@ -1,0 +1,36 @@
+﻿<!ENTITY bouton.tooltip "Access to Planzone">
+<!ENTITY bouton.label "Go to Planzone">
+<!ENTITY tooltip.titre "Planzone Report: ">
+
+<!ENTITY menu.apropos "About">
+<!ENTITY menu.apropos.key "A">
+
+<!ENTITY menu.son "Sound">
+<!ENTITY menu.son.key "S">
+
+<!ENTITY menu.refresh "Refresh">
+<!ENTITY menu.refresh.key "R">
+
+<!ENTITY menu.reset "Authentification">
+<!ENTITY menu.reset.key "A">
+
+<!ENTITY menu.theme "Theme">
+<!ENTITY menu.theme.key "T">
+
+<!ENTITY menu.reset.tooltip "Reset the toolTip">
+<!ENTITY menu.reset.tooltip.key "R">
+
+<!ENTITY menu.preference "Preferences">
+<!ENTITY menu.preference.key "P"> 
+
+
+<!ENTITY menu.majmeteo "Update Weather">
+<!ENTITY menu.majmeteo.key "U">
+
+<!ENTITY statusbarpanel.label "ProjectBar">
+<!ENTITY tooltip.todo "  new assigned todo(s)">
+<!ENTITY tooltip.message "  new received message(s)">
+<!ENTITY tooltip.3 "  à definir">
+<!ENTITY tooltip.4 "  à definir">
+<!ENTITY toolbar.todo "My to-dos">
+<!ENTITY Options "Options">

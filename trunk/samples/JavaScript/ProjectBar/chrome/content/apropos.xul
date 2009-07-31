@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="chrome://ProjectBar/skin/toolbar.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://ProjectBar/locale/apropos.dtd">
+<dialog id="pz_apropos" title="&titre;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept"
+        ondialogaccept="return doOK();">
+       
+<script>
+function doOK()
+{
+
+  return true;
+}
+
+</script>
+
+<dialogheader title="&header.titre;" description="&header.descr;"/>
+<groupbox flex="1">
+	<hbox>
+	<vbox>
+		<image width="54" height="54" src="chrome://ProjectBar/skin/pz_logo.PNG"/>
+	</vbox>
+	<vbox>
+    <hbox>
+      <spacer style="width: 8px"/>
+      <label wordwrap="true" value ="&texte;" columns="5"/> 
+      
+    </hbox>
+    <hbox>
+      <!-- autre label -->
+    </hbox>
+	
+	</vbox>
+		
+	</hbox>
+
+</groupbox>
+</dialog>

@@ -1,0 +1,37 @@
+﻿<!ENTITY titre "Bevorzugte Einstellungen"> 
+<!ENTITY desc.titre "Einstellungen"> 
+
+<!ENTITY tab.id "Identifikation"> 
+<!ENTITY tab.refresh "Refresh"> 
+<!ENTITY tab.reset "Beurkundung"> 
+<!ENTITY tab.son "Sound"> 
+<!ENTITY tab.theme "Thema"> 
+
+<!ENTITY grpbox.id.titre "Zugangsdaten eingeben"> 
+<!ENTITY grpbox.id.status.good "Sie sind angemeldet"> 
+<!ENTITY grpbox.id.status.wrong "Sie sind nicht angemeldet"> 
+<!ENTITY grpbox.id.mail "Ihre E-mail Adresse: "> 
+<!ENTITY grpbox.id.pass "Ihr Passwort: "> 
+<!ENTITY grpbox.id.validate "Bestätigen"> 
+
+<!ENTITY grpbox.son.titre "Sound optionen"> 
+<!ENTITY grpbox.son.check "Sound aktivieren"> 
+<!ENTITY grpbox.son.radio.def "Planzone Standarddatei"> 
+<!ENTITY grpbox.son.radio.perso "Personalisierte Datei"> 
+<!ENTITY grpbox.son.browse "laden..."> 
+<!ENTITY grpbox.son.replay "Wiederholen"> 
+
+<!ENTITY refresh-time "Aktualisierungszeit"> 
+<!ENTITY refresh-automatique "Automatisch aktualisieren">  
+<!ENTITY regler "Manuell einstellen"> 
+
+<!ENTITY reset-title "Planzone ID zurücksetzen"> 
+<!ENTITY can-reset "Sie künnen Ihre Planzone ID zurücksetzen "> 
+<!ENTITY Reset-Authorization-Settings "Berechtigungseinstellungen zurücksetzen"> 
+
+<!ENTITY theme-title "Wählen Sie ein Thema ">
+<!ENTITY theme-label "Sie können ein Thema für Ihre ProjectBar wählen!"> 
+<!ENTITY theme-defaut "Standardthema">
+<!ENTITY theme-blue "Thema “blau”">
+
+<!ENTITY Apply "Sich zu wenden">

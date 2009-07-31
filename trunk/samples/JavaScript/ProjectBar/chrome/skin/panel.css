@@ -1,0 +1,198 @@
+#pz_panel{
+
+height:340px;
+}
+
+
+
+
+#pz_panel_tab{
+
+background: url(chrome://ProjectBar/skin/pz_toolbarbg.png) repeat-x top;
+height:25px;
+
+}
+
+#pz_Splitter{
+
+    moz-appearance: none;
+   background-color: #FFFFFF;
+    min-height: 2px;
+    max-height: 2px;
+}
+
+#pz_separator{
+    border-top: 2px solid !important;
+    -moz-border-top-colors: threedShadow !important;
+    border-bottom: 1px solid !important;
+    -moz-border-bottom-colors: #EEEEEE !important;
+    min-height: 3px;
+    max-height: 3px;
+    background-color: #000000;
+    
+
+}
+
+.pz_panel_toolbaritem{
+  width: 5em;
+  margin: 0px 1px 0px 1px ; 
+  font-size:10pt;
+  
+  
+}
+
+
+
+
+#pz_panel_reduire{
+   cursor:pointer;
+   background: url(chrome://ProjectBar/skin/pz_min2.png) no-repeat ;
+   width:18px;
+
+}   
+
+#pz_panel_reduire:hover{
+
+   background: url(chrome://ProjectBar/skin/pz_min2H.png) no-repeat ;
+
+
+}   
+
+#pz_panel_reduire:hover:active{
+
+   background: url(chrome://ProjectBar/skin/pz_min2A.png) no-repeat ;
+
+
+}   
+
+/*
+#pz_panel_reduire:hover{
+   -moz-appearance: none;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    list-style-image: url(chrome://ProjectBar/skin/pz_minHover.png);
+
+}
+#pz_panel_reduire:hover:active{
+    -moz-appearance: none;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    list-style-image: url(chrome://ProjectBar/skin/pz_minActive.png);
+
+}*/
+
+
+
+
+
+toolbaritem.pz_panel_toolbouton{
+  width: auto;
+  padding: 0px 3px 0px 5px ;
+  
+  font-size:10pt;
+  cursor: pointer;
+  font-family:sans-serif;
+  font-weight:bold;
+  color:#2275A8; /*2275A8*/
+
+
+}
+hbox.pz_panelBouton{
+
+margin-left:5px;
+}
+toolbaritem.pz_panel_toolbouton{
+
+padding-left:12px;
+
+}
+
+
+hbox.pz_panelBouton:hover toolbaritem.pz_panel_toolbouton{
+
+
+  background:url(chrome://ProjectBar/skin/pz_bord_mid.png) repeat-x top;
+
+}
+
+hbox.pz_panelBouton:hover  toolbaritem.pz_bord_droit{
+
+
+  background:url(chrome://ProjectBar/skin/pz_bord_droit.png) no-repeat;
+
+}
+
+hbox.pz_panelBouton:hover toolbaritem.pz_bord_gauche{
+
+
+ background:url(chrome://ProjectBar/skin/pz_bord_gauche.png) no-repeat;
+
+}
+
+
+
+hbox.pz_panelBouton:hover:active toolbaritem.pz_bord_gauche{
+
+
+ background:url(chrome://ProjectBar/skin/pz_bord_gaucheH.png) no-repeat;
+
+}
+hbox.pz_panelBouton:hover:active toolbaritem.pz_bord_droit{
+
+
+ background:url(chrome://ProjectBar/skin/pz_bord_droitH.png) no-repeat;
+
+}
+hbox.pz_panelBouton:hover:active toolbaritem.pz_panel_toolbouton{
+
+
+ background:url(chrome://ProjectBar/skin/pz_bord_midH.png) repeat-x top;
+ color: orange;
+
+}
+
+
+label.pz_toolbarLabel{
+  cursor: pointer;
+}
+
+
+#pz_panel_box{
+   background-color: #FFFFFF;
+
+}
+
+.pz_panel_textbox{
+
+
+}
+
+.pz_deck{
+
+border:none;
+border:0 ;
+
+
+}
+
+#pz_panel_option{
+
+	background: url(chrome://ProjectBar/skin/pz_smallArrow.png) no-repeat right;
+	cursor:pointer
+}
+
+#pz_panel_option:hover {
+
+	background: url(chrome://ProjectBar/skin/pz_smallArrow.png) no-repeat right;
+	cursor:pointer;
+	color:blue;
+	text-decoration:underline;
+}
+#pz_panel_option:hover  #pz_panel_option_label{
+cursor:pointer
+	
+}
+
+
