@@ -1,0 +1,1 @@
+The Planzone API allows users to access project information.
